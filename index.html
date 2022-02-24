@@ -63,13 +63,21 @@
 						<!-- Work -->
 							<article id="work">
 								<h2 class="major">Data Science Projects</h2>
+								
 								<h2><a href="https://github.com/Jaspreet1711/Air-Pollutant-Prediction-Delhi" target="_blank" ><strong>Delhi's AQI Weather Forecast and Prediction</strong></a></h2>
 								<p>Delhi is struggling with pollution and bad air quality from past many years. People with respiratory issues face many health problems. If we are able to forecast and predict pollution level government and patients can take precautionary measures early. PM2.5 and PM10 are major pollutants present that are hazardous to health.</p>
-                                <h2><a href="https://github.com/Jaspreet1711/AppleStockValuePrediction_using_Newz" target="_blank"><strong>Stock Price Prediction using News Headline (NLP)</strong></a></h2>
-								<p>Apple inc. (AAPL) Stock Price next day change (up or down movement) prediction using News Headlines (NLP). I got inspired by one of Kaggle's competition and saw the opportunity to understand basic NLP concepts by applying them. I have collected daily Newz Headlines for Apple INC. data from Investing.com (source_link) using Selenium Web Scraper and downloaded Daily open & close Apple's stock price data from yahoo finance (source_link) in csv format.</p>
-							        <p>In data preprocessing, I made the label "Next day price change" which was returning negative (0) if, current opening price was less than previous day opening price and in vice-a-versa condition it will return positive (1) </p>
-						        
-						        </article>
+                                                                <p>please check out my codes and project description by clicking on the project heading.</p>
+								
+								<h2><a href="https://github.com/Jaspreet1711/AppleStockValuePrediction_using_Newz" target="_blank"><strong>Stock Price Prediction using News Headline (NLP)</strong></a></h2>
+								<p><strong>Breif and Motivation: </strong> Apple inc. (AAPL) Stock Price next day change (up or down movement) prediction using News Headlines (NLP). I got inspired by one of Kaggle's competition and saw the opportunity to understand basic NLP concepts by applying them.</p>
+							        <p><strong>Data Collection: </strong> I have collected daily Newz Headlines for Apple INC. data from Investing.com <a href="https://www.investing.com/equities/apple-computer-inc-news/1" target="_blank" >(source_link)</a> using Selenium Web Scraper and downloaded Daily open & close Apple's stock price data from yahoo finance <a href="https://finance.yahoo.com/quote/AAPL/history/" target="_blank" >(source_link)</a> in csv format.</p> 
+								<p><strong>Data Preprocessing: </strong> label "Next day price change" was modified using opening price change which was returning negative (0) if, current opening price was less than previous day opening price and in vice-a-versa condition it will return positive (1) </p>
+						                <p>In Feature engineering all the headlines were combined together for a same day and were sorted date wise.stopwords were removed and created tokens by using lemmatization. After tokenization TFIDF was created on the whole corpus.</p>
+						                <p><strong>Modeling and its Evaluation: </strong> Implemented Random Forest Classifier after hyperparameter tuning on training set which gave 61% Accuracy on validation set. Accuracy score on training and validation were close to each other which indicated model was not under or over fit.</p>  
+						                <p>Confusion matrix gave us the proper information on evaluation part. True Positive was fine but False Negative were high. As Train-Test split was on time series our trained model got a bit outdated and was not trained on new newz topics and trends. To increase the accuracy model needs to get train regularly.</p> 
+						                <p><strong>Deployment: </strong> FastAPI framework was used to develop the application and deployed the model on Heroku. Input from user will be the newz headline and output will be positive (1) and negative (0).  
+								<p>please check out my codes by clicking on the project heading.</p> 
+						         </article>
 	
 
 						<!-- Elements -->
